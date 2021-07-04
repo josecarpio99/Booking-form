@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Formulario para plugin</title>
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+	<link rel="stylesheet" href="flatpickr-dark.css">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body style="height: 200vh; padding-top: 20px;">
+	<div class="button-form-wrapper">
+
+		<button class="booking-btn booking-btn--mobile ubtn">RESERVAR</button>
+		<div id="booking-form-container" class="booking-form-container in-home">
+			<form class="booking-form">
+				<input type="hidden" id="fecha_inicio">
+				<div class="booking-form__input select-group">
+		        <div id="select-button" class="select-button">
+		          <span class="select-label">Hotel algo</span>
+		          <div class="arrow-down"></div>
+		        </div>
+
+		        <div class="select-dropdown" id="select-dropdown">
+
+		          <input checked type="radio" id="select-hotel-1" name="hotels" value="1" class="option">
+		          <label for="select-hotel-1" class="select-item">Ambos hotels</label>
+
+		          <input type="radio" id="select-hotel-2" name="hotels" value="2" class="option">
+		          <label for="select-hotel-2" class="select-item">otros hotels</label>
+
+		          <input type="radio" id="select-hotel-3" name="hotels" value="3" class="option">
+		          <label for="select-hotel-3" class="select-item">Hotel algo</label>
+
+		        </div>
+		    </div>
+				<div class="booking-form__input date-wrapper">
+					<span class="date-wrapper__text">Llegada</span>
+					<span class="date-wrapper__day">17</span>
+					<div class="month-icon-group">
+						<span class="date-wrapper__month">Noviembre</span>
+						<div class="arrow-down"></div>
+					</div>
+					<input type="text" class="date-wrapper__input" name="arrival-date" id="arrival-date">
+				</div>
+
+				<div class="booking-form__input date-wrapper">
+					<span class="date-wrapper__text">Salida</span>
+					<span class="date-wrapper__day"></span>
+					<div class="month-icon-group">
+						<span class="date-wrapper__month"></span>
+						<div id="arrow-down" class="arrow-down"></div>
+					</div>
+					<input type="text" class="date-wrapper__input" name="exit-date" id="exit-date">
+				</div>
+
+				<div class="adults-children-container">
+					<div class="booking-form__input">
+						<div class="select-group width-100">
+							 <div id="select-button" class="select-button select-button--with-label">
+			        	<span class="inline-label">Adultos</span>
+			          <span class="select-label">1</span>
+			          <div class="arrow-down"></div>
+			        </div>
+
+			        <div class="select-dropdown select-dropdown--width-auto" id="select-dropdown">
+
+			          <input checked type="radio" id="select-adults-childrens-1" name="adults" value="1" class="option">
+			          <label for="select-1" class="select-item select-item--small">1</label>
+
+			          <input type="radio" id="select-adults-childrens-2" name="adults" value="2" class="option">
+			          <label for="select-2" class="select-item select-item--small">2</label>
+
+
+			        </div>
+						</div> <!-- select-group -->
+		    	</div><!-- booking-form__input -->
+		    	<div class="booking-form__input">
+		    		<div class="select-group width-100">
+		    			 <div id="select-button" class="select-button select-button--with-label">
+			        	<span class="inline-label">Niños</span>
+			          <span class="select-label">0</span>
+			          <div class="arrow-down"></div>
+			        </div>
+
+			        <div class="select-dropdown select-dropdown--width-auto" id="select-dropdown">
+			          <input checked type="radio" id="select-childrens-1" name="childrens" value="0" class="option">
+			          <label for="select-1" class="select-item select-item--small">0</label>
+
+			          <input type="radio" id="select-childrens-2" name="childrens" value="1" class="option">
+			          <label for="select-2" class="select-item select-item--small">1</label>
+			        </div>
+		    		</div><!-- select-group -->
+		    	</div><!-- booking-form__input -->
+				</div>
+
+				<div class="booking-form__input booking-form__input--small  prom-code">
+					<span class="prom-code__placeholder">Código promocional...</span>
+					<input type="text" name="prom" id="prom-code">
+				</div>
+
+				<button class="find-btn ubtn">BUSCAR</button>
+				<button class="booking-btn booking-btn--desktop ubtn">RESERVAR</button>
+
+			</form>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+	<script src="form-booking.js"></script>
+</body>
+</html>
